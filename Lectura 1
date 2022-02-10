@@ -1,0 +1,25 @@
+---
+title: "Resumen lectura 1"
+author: "Brianda"
+date: "9/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+La demografia y la poblacion son conceptos relacionados, iclusive en la lectura se comenta que la poblacion ees el objeto de estudio de la demografia. en este los compponentes de la demografia son tres: fecundidad, migracuion y mortlidad. Estos tres componentes conforman y transforman la esteructuraa de una poblacion en una comunudad, region o país, segun la definamos
+
+La demografía es el estudio de la población no es sino traducir la palabra compuesta de etimología griega (demografía) y no nos acerca a la definición del objeto de estudio de la disciplina.
+Por población se entiende un conjunto de individuos, constituido de forma estable, ligado por vínculos de reproducción e identificado por características territoriales, políticas, jurídicas, étnicas o religiosas. También se puede definir como tal si tiene continuidad en el tiempo y si esta continuidad está asegurada por vínculos de reproducción que ligan padres e hijos y garantizan la sucesión de las generaciones. Finalmente, una población se define también por las características que trazan su perfil y sus límites. Estas características pueden ser de distinta naturaleza y la más común es la geográfica, es decir, la pertenencia a un determinado territorio. Sin embargo, no es la única; la pertenencia a un determinado grupo étnico o religioso puede ser suficiente para aislar y definir a una población, tiende a perpetuarse y a permanecer en el tiempo, pero ello no significa que sea eterna. 
+
+La demografía dedica su atención a otras características esenciales. Éstas son, por citar las principales, el sexo, la edad, el estado civil, el lugar de nacimiento y de residencia, características que unidas al conocimiento de las socioeconómicas y biofísicas permiten construir un perfil individual útil para interpretar y entender los fenómenos relacionados con la fecundidad, la mortalidad y la movilidad.
+Se ha dicho que la demografía tiene dos almas: una ligada a lo biológico, la otra a lo social. No hay duda, en efecto, que gran parte de los eventos y fenómenos demográficos son manifestaciones de procesos biológicos.
+Aún más evidente resulta la interdependencia entre los fenómenos demográficos y los sociales, entendiéndose por tales todos aquellos inherentes al particular tipo de organización del conjunto humano.
+
+No se pueden exponer los métodos de análisis de una disciplina como la demografía sin referirse al material que constituye su objeto de estudio. De hecho, su naturaleza condiciona el tipo de análisis y la naturaleza de los métodos aplicables y por ende el grado de detalle, la cobertura y la significación de los resultados. Por otra parte, el progreso de los métodos y del conocimiento de los problemas demográficos representa en sí un potente estímulo para mejorar, ampliar y profundizar la recogida de datos. En demografía, como en todas las disciplinas, hay un problema de circularidad entre la naturaleza de los datos de partida, los métodos de análisis y el conocimiento de los problemas: los progresos en los unos favorecen progresos en los otros y viceversa. 
+Las características de los datos recogidos, su fiabilidad y su validez. Éstos son aspectos que generalmente se abordan con mayor precisión técnica en las introducciones de los manuales de estadística, pero que no pueden ser eludidos en un manual de demografía.
+
+El censo debe ser universal dentro de los límites del territorio censado: es decir, ningún individuo o categoría de persona debe ser descuidado; debe ser simultáneo en el sentido de que la enumeración tiene que referirse a un mismo día u hora (aun cuando materialmente la operación dure varios días) para evitar las cuentas dobles o las exclusiones causadas por la movilidad de las personas. 
+Naturalmente, la riqueza de la información que se deduce de un censo no depende solamente del número y tipo de preguntas, sino también del tratamiento que se da a las distintas características recogidas, combinándolas entre sí, y del grado de detalle territorial con el cual las informaciones se elaboran y publican.
+El hecho de que los resultados del censo adquieran validez oficial no es suficiente garantía de su exactitud. 
