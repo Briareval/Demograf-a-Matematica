@@ -1,0 +1,180 @@
+################################################################################
+Tiempo de duplicidad de una poblacion 
+
+lo que se intenta plantear y conocer es en que tiempo una poblacion determinada
+se duplica, para lo anterior se plantea la siguiente ecuacion que esta basada en
+la tasa de crecimeinto exponencial:
+
+$p_{t}$= pob inicial
+
+$p_{t+n}$= pob final
+
+$r$= tasa de crecimiento exponencial
+
+n= tiempo
+
+$p_{t+n}-p_t*e^(r*n)}$ ####tasa de crecimiento 
+
+para conocer cuando se duplica la poblacion necesiramos despejar n!!! porque 
+queremos conocer cuantos años se tardaria una poblacion en duplicarse!!!!
+
+$p_{t+n}/p_{t=e^(r*n)}$
+
+$p_{t+n}/p_{t}=2$
+
+2=e^(r*n)
+
+r=.01399829
+
+ln(2)=r*n
+
+0.6931= (.1399829)*n
+
+n=0.6931/.1399829
+
+n= 0.6931/1.399829  (pasando a porcentaje)
+
+n=49.51319
+
+si tenemos una tasa de crecmiento exponencial de 1.399829 entonces el tiempo de 
+duplicacion de nuestra oblacion sera de 49.51 años 
+
+ejercicio:  queremos conocer en que tiempo se va a duplicacr la pob en mexico 
+con la tasa de crecimiento del año 1970.... sabemos que la tasa de crecimiento 
+era de 3.1
+tenemos que en 1970 habia 50.6 millones de personas 
+¿en cuanto teimpo en mexico tendriamos 100 millons de personas con una tasa de 
+crecimiento de 3.1?
+R= (22.29 respuesta del compañero)
+
+.6931=e^(r*n)
+
+r=3.1
+
+ln(2)=r*n
+
+.6931= (0.031)*n
+
+n=.6931/0.031
+
+n= 69.31/3.1 (pasando a porcentaje)
+
+n=22.35806
+
+
+
+En el año 2000 la tasa de crecimieto era de 1.4, en México habia en el año 2000
+99 millones, calcular
+¿en cuanto teimpo en mexico tendriamos 198 millones de personas con una tasa de 
+crecimiento de 3.1?
+R= 49.51
+
+.6931=e^(r*n)
+
+r=1.4
+
+ln(2)=r*n
+
+.6931= (0.014)*n
+
+n=.6931/0.014
+
+n= 69.31/1.4 (pasando a porcentaje)
+
+n=49.50714
+
+#################################################
+#####################################################
+
+Dinamica demografica 
+
+En la dinamica demografica se relaciona con el tamaño, la composicion, las 
+perdidas y las ganancias de la poblacion
+ 
+El tamaño se refiere a la cantidad de personas que existen en un territorio en 
+un tiempo determinado, la composicion de una poblacion se refiere al sexo, grupo
+de edad  (caracteristicas de una poblacion)
+
+Las perdidas y ganancias se vinculan con la fecundidad, mortalidad (perdidas)y
+la migracion 
+ 
+ 
+ ######### tasas brutas en la poblacion 
+Una tasa bruta como su nombre lo indica y no concidera la composicion de la 
+poblacion(sexo, edad, uniones o matrimonios. La vamos a definir de la siguiente
+manera:
+ 
+ TB= Evento/la poblacion media
+ 
+La poblacion media se define como el promedio de poblacion durante un periodo 
+de tiempo
+
+La poblacion a mitad de año..... se relaciona normalmente con los datos del 
+censo......... y se asocia a conocer la poblacion a mitad de año (30 junio)
+ 
+Tenemos la poblacion del año 2004 es de 293657000 y la poblacion del año 2005 es
+296410000, entonces la poblacion media del año 2004-2005 ees la siguiente: 
+pmedia=(293657000+296410000)/2
+      = 295033500
+ 
+ 
+ Calcular tasas brutas de los siguientes eventos:
+ tasas brutas de estados unidos de 2004 al 2005
+ evento: nacimientos..... 4129000, muertes..... 2425000, immigracion... 1122000,
+ emigracion.... 73000
+ 
+ TBN=  4129000/295033500= 0.01399502 = 13.99 ......... Por cada 1000 en USA en 
+ el periodo 2004-2005 nacen 14 personas 
+ 
+ TBM= 2425000/295033500= 0.008219406 * 1000..... Por cada 1000 personas en USA
+ en el periodo 2004-2005 se mueren 8 personas
+ 
+ TBI= 1122000/295033500= 0.003802958* 1000 .... Por cada 1000 personas en USA
+ en el periodo 2004-2005 3.8 inmigrantes 
+ 
+ TBE= 73000/295033500=  0.0002474295 *1000.... Por cada 1000 personas en USA
+ en el periodo 2004-2005 .24 emigrantes 
+ 
+ #############################
+tasas especificas 
+Estas tasas tienen relacion con las caracteristicas poblacionales (sexo, grupos
+de edad)
+ 
+ El planteamiento de las tasas especificas es el siguiente:
+ 
+ Te^i= E^i/ Pob^i
+ 
+ te^i= tasa especifica de un evento con la caracteristica i (15-19)
+ 
+ E^i= es el numero del evento de caracteristica i (15-19)
+ 
+ Pob^i= es la poblacion media con caracteristicas i (15-19)
+ 
+ 
+ 
+ ########### Proporcion de sexos
+ 
+Este es otro indicador demografico que permite conocer la cantidad de hombres 
+que existen con relacion a las mujeres 
+ 
+La proporcion de sexos es un indicador que muestra el balance entre el numero 
+de hombres y mujeres
+
+Por ejemplo, se puede calcular la proporcion masculina y se cacula dividiendo el
+numero de hombres entre el numero de mujeres. Se define de la sig manera:
+ 
+ PS= Hombres^i/ Mujeres^i
+ Hombres(0 a 4 años) en el 2008= 8226630..... Brasil
+ Mujeres(0 a 4 años) en el 2008= 7976611
+ 
+
+ Hombres(0 a 4 años) en el 2008= 1453690..... Italia
+ Mujeres(0 a 4 años) en el 2008= 1373687
+ 
+PS^(0 A 4)=(8226630/7976611)= 1.031..... Brasil 
+para la mejor iterpretacion multiplicamos por 100 y tendriamos que en Brazil en
+el grupo de edad de 0 a 4 años hay 103 hombres por cada 100 mujeres
+ 
+PS^(0 A 4)=(1453690/1373687)= 1.058..... Italia
+para la mejor iterpretacion multiplicamos por 100 y tendriamos que en Italia en
+el grupo de edad de 0 a 4 años hay 106 hombres por cada 100 mujeres
