@@ -1,0 +1,104 @@
+---
+title: "Continuacion"
+author: "Brianda"
+date: '2022-03-16'
+output: html_document
+---
+
+Ecuacion compensador
+Ecuacion compensadora es una de los principales elementos de la demografia y se 
+planta de la siguiente manera
+
+$P_{2022}=P_{2021}+P_{t+n}=P_{t}+N_{\rightarrow t+n}-D_{\rightarrow t+n}+I_{\rightarrow t+n} -E_{\rightarrow t+n}$
+
+$P_{2022}=P_{2021}+N_{\rightarrow 21 al 22}-D_{\rightarrow 21 al 22}+I_{\rightarrow 21 al22} -E_{\rightarrow 21al22} $
+
+
+N= nacimientos
+
+D= defunciones
+
+I= inmigrantes
+
+E= emigrantes 
+
+
+$P_{t+n}-P_{t}=(P_{t}+N_{t+n}-D_{t+n})+(I_{t+n} -E_{t+n})$
+
+$CP=CN+CS$
+
+Basandonos en la ecuacion compensadora podriamos agrupar 
+
+CP= crecimiento poblacional
+
+CN= crecimiento natural
+
+CS= crecimiento social
+
+Ejercicio:
+
+Datos:
+
+$pob_{2004}= 293,657,000$
+
+$pob_{2005}= 296,410,000$
+
+$Nac_{2004-2005}= 4,129,000$
+
+$Def_{2004-2005}= 2,425,000$
+
+$Inm_{2004-2005}= 1,122,000$
+
+$Em_{2004-2005}= 73,000$
+
+Realizando las operaciones:
+
+$(296,410,000-293,657,000)=(4,129,000-2,425,000)+(1,122,000-73,000)$
+
+$CP= 2,753,000$
+
+$CN= 1,704,000$
+
+$CS= 10.49000$
+
+
+
+$P_{t+n}=P_{t}+N_{t+n}-D_{t+n}+I_{t+n} -E_{t+n}+ \hat I_{t+n}-\hat E_{t+n}$
+
+$CP=CN+CS_{I}+\hat C\hat S_{I}$
+
+Enridades       | CN (2005) |CS_{I}   |CS_{I}   | CP
+---------       |-----------|---------|---------|-----
+Edo mex         | 44,441    |  49,607 |  -12,202| 81,846
+Michoacan       | 32,585    |  44,347 |    3,381| 80,313
+Chiapas         | 35,065    |  30,486 |    7,391| 72 942
+Baja california |  6,724    |   9,364 |    2,653| 13,435
+Nuevo Leon      | 18,518    |  29,314 |    4,996| 52,828
+Jalisco         |  2,001    |   1,044 |      174|  3,219
+Sinaloa         |  2,629    |     699 |   -2,393|    935
+Guanajuato      |  3,228    |   1,940 |    1,306|  6,474
+total           |145,191    |  16,689 |        0| 311,992
+
+
+Tasa de Crecimiento poblacion 
+
+
+1) Tasa crecimiento anual (Poblacion)
+
+$TCA=(P_{t+n}-P_{t})/P_{t}$
+
+$(296410000-293657000)/293657000= 0.009374883$
+
+Donde:
+$P_{t}$= Poblacion inicial
+
+$r$= tasa de crecimiento exponencial
+
+$n$= numero de años
+
+
+2) Tasa crecimiento exponencial (poblacion)
+$TCE \rightarrow P_{t+n}= P_{t}* e^(r*n) \Rightarrow (N(\frac{P_{t+n}}{P_{t}}))r*n$
+
+$ \Rightarrow N(\frac{P_{t+n}}{P_{t}}))/n=r \Rightarrow r=0.0083 $
+
