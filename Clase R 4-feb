@@ -1,0 +1,266 @@
+---
+title: "Dia1"
+output: pdf_document
+---
+# Introduccion 
+R tiene varios usos y es un programa muy flexible y a su ves sencillo de manejar.  
+Algunos de sus usos ...  
+i.   Calculadora.  
+ii.  Uso de Pi.  
+iii. Variables en R.     
+iv.  Operaciones aritmeicas, ect. 
+
+**EJEMPLO**  
+
+```{r}
+2+2
+a = 4
+b = 3
+a+b
+sum(a,b)
+
+```
+
+**Operaciones de Comparacion** 
+```{r}
+a > b   # ¿a es mayor que b?
+a >= a  # a es mayor igual que a
+a < b   # ¿a es menor que b?
+a <= b
+a == b  # ¿a es igual que b?
+a == 4
+a != b # ¿a es diferente a b?
+
+```
+# Conceptos y Herramientas R
+##Concepto de Funcion 
+```{r}
+
+x = abs(-2.5) ## abs es la funcion de valor absoluto
+x
+
+
+```
+
+
+## Ayuda
+Para pedir ayuda a R
+```{r}
+help(abs)
+
+```
+
+## Ejemplos
+Para pedir ejemplos sobre una funcion a R
+```{r}
+example(abs)
+```
+
+## Asignar valores 
+Darle valor a variables 
+```{r}
+x = "hola" # variable tipo caracter
+z = 6      # el igual solo funciona en una sola direccion
+
+```
+
+En este curso los objetos o variables que se utilizan son de 2 tipos:     
+i.caracter     
+ii.numerico    
+
+```{r}
+ciudad = "Toluca"                                # una entrada
+nombres = c("karla","Rodrigo","Miguel","Samuel") # caracter y 4 entradad
+edad = c(28,17,49,31)                            # numerico y 4 entradas
+
+```
+
+## Conocer el tipo de Variable 
+
+```{r}
+class(nombres)       # tipo de variable
+class (edad)
+
+```
+
+## Creacion de un data.frame
+
+```{r}
+base1 = data.frame (nombres, edad) # se crea una base de datos con 2 variables
+View (base1)                       # ver la base de datos
+ls (base1)                         # ver lista de variables  de base 1 
+base1$edad = base1$edad1
+
+```
+
+## Observar las variables creadas  
+
+```{r}
+ls() # vemos todas las variables creadas
+rm(a)
+rm (b,ciudad, z)
+
+```
+
+# Crear tabulados
+
+```{r}
+
+table (nombres)
+table (edad)
+
+```
+
+## Variables con una entrada
+
+```{r}
+edajuan <- 25                     # variable númerica
+ocupajuan <- "carpintero"         # variable caracter
+edasofia <- 32                    # var númerica
+ocupasofia<- "profesora"          # var caracter
+edajuan                           # mandas llamar a tu objeto
+sumedad<- edajuan + edasofia      # suma edades
+sumedad                           # mandas llamar un objeto
+#sumjuan <- edajuan+ ocupajuan     # marcca error por el tipo de variables
+
+```
+ 
+## Variables con dos entradas
+
+```{r}
+x <- c(0:10, 50)
+x
+```
+
+**EJEMPLO**
+
+```{r}
+palumnos<- c(40, 120, 60, 80)                # alumnos fac economia
+etiq <-  c("act", "eco", "rE", "nib")
+pie (palumnos)
+pie (palumnos, etiq)
+help (pie)
+pie (palumnos, etiq, main = 
+       "Gráfica de pie de la facultad de economía", 
+     sub = "Fuente: facultad de economía"
+     , col = c("blue", "red", "pink", "yellow"), 
+     clockwise = FALSE, radius = 1.5, lty = 12)
+
+```
+
+*Ejercicio*
+
+Crear 3 variables de 4 entradas. Las variables de nombre:  facultad, licenciatura, calificacion alumnos verificar con r que tipo de  variables son (numerico y caracter) borrar las variables facultad y califciacion alumno graficar con pie la variable calificacion incorporar los diversos argumentos.  
+
+
+## Paqueterias en R.  
+
+Uno de los principales aspectos de r son las paqueterias que permiten realizar diversos aspectos en R como tecnicas estadisticas, graficas, tablas....  
+
+Estas paqueterias se encuentran en un servidor, por lo cual, lo primero que se tiene que hacer con estas paqueterias es bajarlas de la red R colaborativo....  
+
+"Cualquiera" puede subir una paqueteria en R sin embargo esto lleva un proceso de validacion por parte del equipo de R para poder subir una paqueteria o funcion para utilizar paqueterias primero se descarga de internet la paqueteria debemos saber que paqueteria  se va utilizar durante su sesion en R.      
+    
+Por ejemplo si vamos a utilizar un analisis por conglomerados debemos saber en que paqueteria esta la funcion que nos permite realizar conglomerados.    
+
+La instalacion de paqueterias se realiza en dos etapas: 
+i.  Descargar la paqueterias de internet.  
+ii. Requerirla en  tu sesion de R
+iii.Para hacer comentarios e utiliza el simbolo "#".  
+iv. Instalar paqueterias desde internet.
+```{r}
+# Para insallar una paqueteria 
+
+#install.packages("foreign")
+#install.packages("questionr")
+#install.packages("car") 
+
+#Insalar muchas paqueterias
+
+#install.packages(c("foreign","questionr","car")) 
+
+# **NOTA se han pueso las funciones install.packages por cuestiones de escriura en R, para su instalacion van sin # **
+# Para mandar llamar a una libreria
+
+require(foreign) 
+library(foreign)
+
+```
+
+La paqueteria *foreign* sirve para exportar o importar bases de datos,*questionr* es para expandir fracuencias de bases de datos muestrales y *car* es para regresion.
+Dentro de cada paquete vienen multiples funciones que solo las podemos usar cuando mandamos a llamar el paquete.  
+
+La ayuda es un aspecto vital de R, debido a que describe de manera adecuada cada una de las funcionespara usar la funcion *help()* para solicitar ayuda de una funcion se usa el siguiente comando y muestra esencialmente cuatro cosas.
+
+```{r}
+help("sum")
+
+```
+1.- Descripcion.  
+2.- Forma de uso.  
+3.- Argumentos.  
+4.- Detalles.  
+5.- Ejemplo.  
+
+##*Ejercicio*
+Buscar para que sirven las siguientes funciones
+
+1.- wtd.table.  
+2.- plot.  
+3.- ts.  
+
+
+## Vectores
+```{r}
+edades <- c(32, 35, 43, 25)
+estcony <- c("casado", "soltero", "soltero", "union libre")
+sexo<- c(1, 2, 2, 1)
+
+edades
+estcony
+sexo
+
+View (sexo)
+sexo [4]
+sexo [c(1,3)]
+```
+
+## Ejemplo 
+
+```{r}
+anioslaboral <- c(3,7,23,4)
+nombre <- c("juan","pedro","raquel","paty")
+segsocial <- c("IMSS","IMSS","ISSSTE","PRIVADO")
+
+b<- c(3,4,5,6,7, 8, 9 , 10 , 11, 12)
+dim(b) <- c(2,5)
+View(dim(b))
+```
+
+# CENSO
+Datos...  
+
+Nombre,Genero, Nivel de Edcucacion, Ocupacion, Seguridad Social, Contrato
+i.  Encontrar ocupacion de Carlos.  
+ii. Encontrar Seg. Social de A y B.  
+iii.Enconrar quien no tiene conrato.  
+```{r}
+anioslaboral <- c(3, 7, 23, 4)
+nombre <- c("juan", "pedro", "raquel", "paty")
+segsocial <- c("IMSS", "IMSS", "ISSSTE", "PRIVADO")
+
+anioslaboral <- c(3, 7, 23, 4)
+nombre <- c("juan", "pedro", "raquel", "paty")
+segsocial <- c("IMSS", "IMSS", "ISSSTE", "PRIVADO")
+contrato <- c(1, 1, 1, 0)
+```
+
+## Grafica con Porcentajes
+
+
+
+```{r}
+porc <- round(palumnos/sum(palumnos)*100)
+etiqporc <- paste (etiq, porc)
+etiqporc1 <- paste (etiqporc, "%", sep = "")
+```
