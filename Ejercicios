@@ -1,0 +1,67 @@
+x<-3
+y<-4
+hipotenusa<- fumction (x,y)(return(sqrt(x^2+y^2)))
+hipotenusa
+pob<-33333222
+nacimiento
+tbn<-nacimiento/ pob 
+
+entidades <-c("ags","edomex", "chiapas)
+tbn<-c (.14288,0.1080,.03949243)
+tbm<-c (.0069605,0089,02247131)
+tbi<-c (.1939034,0.03054, .4490611)
+tbe<-c(.101438,-079,.1270692)
+
+base<- data.frame(entidades,tbn,tbm,tbi,tbe)
+base1<- data.frame (entidades, base[,2:5]*100)
+
+Ejercicios de clase (estado:Chiapas)
+
+Poblacion 2020= 126,014,024
+Nacimientos= 49,766
+Defunciones= 28,317
+Emigracion= 160,125
+Inmigracion= 56,588
+
+
+TBN2020= 49766/126014024= 0.0003949243 *1000= 0.3949243
+por cada 1000 personas en mexico en el periodo 2020 nacen 0.39 personas 
+por 100 0.03949243
+
+TBM2020= 28317/ 126014024= 0.0002247131*1000= 0.2247131
+por cada 1000 personas en mexico en el periodo 2020 mueren 0.2247 personas
+por 100 0.02247131
+
+TBI2020= 56588/126014024= 0.0004490611 *1000= 0.4490611
+por cada 1000 personas en mexico en el periodo 2020 tenemos 0.449 inmigrantes 
+por 100 0.04490611
+
+TBE2020= 160125/126014024= 0.001270692* 1000= 1.270692
+por cada 1000 personas en mexico en el periodo 2020 tenemos 1.27 emigrantes 
+por 100 0.1270692
+
+
+################ proporcion de sexos al nacimiento
+La proporcion de sexos al nacimiento se define de la siguiente manera:
+
+PSN= nac_h/ nac_m
+
+PSN_mx=828944/800264= 1.035838....... multiplico por 100
+PSN_mx=103.5838.... En mexico en el año 2020 nacen 103 niños por cada 100 niñas
+
+
+#########proporcion de niñas por mujer
+
+PNM= pob_<5años/pobfem
+pob_<5años= 2827377
+pobfem_15-44=23855033
+
+PNM= 2827377/23855033=0.1185233 *100= 11.85233
+hay 11 niñas por cada 100 mujeres en edad de 15 a 45 años
+
+
+####### tasa de dependencia 
+La tasa dependencia se relaciona a las personas que tiene mas posibilides de ser
+dpendientes
+
+TD= (pob_0-14+pob_65ymas)/(pob_15-64)
