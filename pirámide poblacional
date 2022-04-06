@@ -1,0 +1,35 @@
+###############################################################################
+################Piramide poblacional 
+
+install.packages("pyramid") ### paqueteria para grafica de piramide poblacional 
+require (pyramid)
+
+
+hombres <- c(60,50,40,30,25,20,15,10) #poblacion de hombres
+names(hombres)<- c('0-9', '10-19', '20-29', '30-39', '40-49', '50-59','60-69','70y+')  ###grupos de edad
+mujeres<- c(80,70,50,30,28,23,18,15) ##poblacion mujeres
+
+
+install.packages("dplyr")
+require(dplyr)
+Personas01 <- Personas01 %>%
+as_tibble() %>%
+mutate(gpoeda= case_when(EDAD>=0 & EDAD<=4 ~ 1,EDAD>=5 & EDAD<=9 ~ 2, EDAD>=10 & EDAD<=14 ~ 3, EDAD>=15 & EDAD<=19 ~ 4, EDAD>=20 & EDAD<=24 ~ 5, EDAD>=25 & EDAD<=130~ 6, EDAD == 999 ~ 7))
+table (Personas01$gpoeda)
+install.packages("questionr")
+require(questionr)
+wtd.table (Personas01$SEXO, weights=Personas01$FACTOR)
+wtd.table (Personas01$gpoeda, weights=Personas01$FACTOR)
+
+table(Personas01$gpoeda)
+
+########################el factor, lo que represemta una persona
+
+################## %>% es un pie 
+######## grafica de piramide
+#x11()
+pyramids (Left=hombres,Llab="Hombres", Right=mujeres, Rlab="Mujeres",Clab="Grupo de edad",Lcol="purple",Rcol="pink", Laxis=c(0,50,100), Csize=1, main="Grafica 1.Ejemplo de piramide poblacional clase de de demografia")
+
+
+ags <-read.csv)(file.choose()) ##para R normal
+##################### importar en r cloud
