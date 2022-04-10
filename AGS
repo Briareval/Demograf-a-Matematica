@@ -1,0 +1,39 @@
+install.packages("dplyr")
+require (dplyr)
+agsmuj1 <- ags %>%
+as_tibble() %>%
+mutate(gpoeda= case_when(EDAD>=0 & EDAD<=4 ~ 1,EDAD>=5 & EDAD<=9 ~ 2, EDAD>=10 & EDAD<=14 ~ 3, EDAD>=15 & EDAD<= 19 ~ 4, EDAD>=20 & EDAD<=24 ~ 5,  EDAD>=25 & EDAD<=130~ 6), conyu=case_when( SITUA_CONYUGAL==1 | (SITUA_CONYUGAL>=5 & SITUA_CONYUGAL<=7) ~ 1, SITUA_CONYUGAL>=2 & SITUA_CONYUGAL<=4 ~ 2, SITUA_CONYUGAL==8 ~ 3,SITUA_CONYUGAL==9 ~ 4)) %>%
+filter (SEXO ==3 & (EDAD >= 50 & EDAD <= 130)) %>%
+select (SEXO, MUN, INGTRMEN, EDAD, SITUA_CONYUGAL, conyu, gpoeda)  %>%
+
+
+agsmuj1 %>%
+group_by (MUN) %>%
+summarise(mediana= median(INGTRMEN, na.rm= T))
+
+
+
+
+names (agsmuj)
+
+
+table (agsmuj$SEXO)
+table (agsmuj$EDAD)
+table (agsmuj$gpoeda)
+table (ags$gpoeda)
+
+install.packages("dplyr")
+require (dplyr)
+base2 <- ags %>%
+as_tibble() %>%
+filter (MUN==1 | MUN==2)
+
+
+table (ags$conyu)
+
+
+conyu= 1... Unido
+       2... Alguna vez unido
+       3... Nunca unido
+       4... No especificado 
+       
