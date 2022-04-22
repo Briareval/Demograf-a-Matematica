@@ -1,0 +1,31 @@
+¿Cuantos hijo/as puede tener una mujer durante su vida fertil?
+Suponemos que inicia a los 15 años y termina a los 45 años 
+
+Suma de las tasas específicas de fecundidad por grupos quinquenales de edades de
+las mujeres entre 15 y 49 años, multiplicado por 5.
+Las tasas específicas se calculan haciendo el cociente entre el total de hijos 
+tenidos por las mujeres de un grupo quinquenal y el total de mujeres de ese grupo
+de edades. A partir del censo, se calcula con las preguntas sobre el total de 
+hijos tenidos y los hijos tenidos el último año, según edad de las mujeres, y 
+aplicando un método desarrollado por Brass
+
+
+edad<-c("15-19","20-24","25-29","30-34","35-39","40-44")
+nacviv<-c(283536,481311,415706	,284927,136289,28760)
+pobfem<-c(5505991,5079067,4582202,4444767,4328249, 3658904)
+tef<-5*(nacviv/pobfem)
+tef
+df=data.frame(edad,nacviv,pobfem,tef)
+
+sumamos= 0.25747953 +0.47381832+ 0.45360942+ 0.32051961+ 0.15744127+ 0.03930139
+       =1.70217*10
+       =17.0217*2
+       =34.0434
+por lo tanto una mujer puede tener 34 hijos en su vida fertil
+
+2)Funcion
+años 15 a 45 son 30 años
+meses (considerare 10.5), convertido a años es 7/8=0.875
+
+años de vida/meses de embarazo= 30/0.875= 34.28571
+por lo tanto 34 hijos puede tener 
