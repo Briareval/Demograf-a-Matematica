@@ -1,0 +1,22 @@
+install.packages("MASS")
+install.packages("fitdistrplus")
+install.packages("ggpubr")
+install.packages("ggplot2")
+
+dnorm(1,mean=0,sd=1)
+0.2419707
+
+pnorm(1,mean=0,sd=1,lower.tail=F)
+0.1586553
+
+pnorm(c(2),mean=0,sd=1)-pnorm(c(-2),mean=0,sd=1)
+0.9544997
+
+
+x<-seq(-4,8,0.5)
+
+f1<-dnorm(x,0,1)
+f2<-dnorm(x,2,1.5)
+f3<-dnorm(x,4,2)
+
+plot(x,f1,type="line",main="Funcion de densidad normal",col=4,lwd=3,xlab="Valores de x",ylab="Funcion de densidad",xlim=c(-4,8),ylim=c(0,0.4))
