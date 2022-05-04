@@ -1,0 +1,37 @@
+Ejemplo
+gpoedad<-c("15-19","20-24","25-29","30-34","35-39","40-44")
+nac<-c(12130,42103,80933,93107,55985,11480)
+pobfem<-c(727168,782583,791698,751566,814971,769345)
+nacfem<-c(5895,20461,39331,45247,27207,5579)
+nachom<-c(nac-nacfem)
+propsex=sum(nachom)/sum(nacfem)*100
+S=(100/100+propsex)
+tef<-(nac/pobfem)
+teffem<-(nacfem/pobfem)
+n=5
+TGrF=sum((nac)/pobfem)*5
+TGF<-sum(tef)*n
+TBR<-TGF*S
+tasas<-data.frame(gpoedad,nac,pobfem,nacfem,nachom,tef,teffem)
+
+
+######################################################################
+hacer un analisis vorporativo de los dos paises elegidos con respecto a las TG y
+TBR... en Rmarkdown añadir un poco de contexto sobre las diferencias de los
+paises
+
+Baja California sur, la paz
+gpoedad1<-c("15-19","20-24","25-29","30-34","35-39","40-44")
+nac1<-c(355,2671,822,892,647,325,68)
+pobfem1<-c(727168,782583,791698,751566,814971,769345)
+nacfem1<-c(165,395,474,327,165,39)
+nachom1<-c(nac1-nacfem1)
+propsex1=sum(nachom1)/sum(nacfem1)*100
+S1=(100/100+propsex1)
+tef1<-(nac1/pobfem1)
+teffem1<-(nacfem1/pobfem1)
+n1=5
+TGrF1=sum((nac1)/pobfem1)*5
+TGF1<-sum(tef1)*n
+TBR1<-TGF1*S
+tasas1<-data.frame(gpoedad1,nac1,pobfem1,nacfem1,nachom1,tef1,teffem1)
