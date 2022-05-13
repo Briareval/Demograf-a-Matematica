@@ -1,0 +1,37 @@
+BASE POBLACION
+
+read.csv()trabaj de bases de datos
+Personas01<-read.csv (file.choose())
+require(dplyr)
+
+
+base1<-Personas01%>%
+as_tibble() %>% 
+mutate(gpoeda= case_when(EDAD>=0 & EDAD<=9 ~ 1, 
+EDAD>=10 & EDAD<=19 ~ 2,
+EDAD>=20 & EDAD<=29 ~ 3, 
+EDAD>=30 & EDAD<=39 ~ 4,
+EDAD>=40 & EDAD<=49 ~ 5,
+EDAD>=50 & EDAD<=59 ~ 6,
+EDAD>=60 & EDAD<=69 ~ 7,
+EDAD>=70 & EDAD<=74 ~ 8,
+EDAD>=75 ~ 9,
+EDAD==999~ 10), 
+sexo=case_when(SEXO=1 ~ 1, SEXO=3 ~ 2),
+nivesco= case_when(NIVACAD>=00 & NIVACAD<=03~ 1,
+NIVACAD>=04 & NIVACAD<=08 ~ 2,
+NIVACAD>=09 & NIVACAD<=14 ~ 3,
+NIVACAD>=99 & NIVACAD<=nulo ~ 3),
+conyu = case_when(SITUA_CONYUGAL==1| SITUA_CONYUGAL ==5 | SITUA_CONYUGAL ==6 | SITUA_CONYUGAL ==7 ~ 1, 
+SITUA_CONYUGAL>=2 & SITUA_CONYUGAL <=4 ~ 2, 
+SITUA_CONYUGAL==8 ~ 3, 
+SITUA_CONYUGAL==9 ~4,
+SITUA_CONYUGAL==nulo ~5)) %>%
+
+select(SITUA_CONYUGAL, conyu, EDAD, gpoeda, SEXO)
+
+
+
+Base de viviendas
+
+
