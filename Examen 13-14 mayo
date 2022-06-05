@@ -1,0 +1,295 @@
+1.	Dinamica demografica  
+BASE POBLACION
+Aguascalientes 
+install.packages("foreign")
+require(foreign)
+install.packages("questionr")
+require(questionr)
+install.packages("dplyr")
+require(dplyr)
+
+##################################### 1 #######################################
+####### DEMOGRAFIA
+####### SEXO
+table(Personas01$SEXO)
+sum(table(Personas01$SEXO))
+require(questionr)
+wtd.table(Personas32$SEXO, weights = Personas32$FACTOR) 
+sum(wtd.table(Personas32$SEXO, weights = Personas32$FACTOR))
+
+######## GRUPO DE EDAD
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) == 999] <-0 
+sum(Personas01$GrupoEdad == 0)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=0 & as.numeric(Personas01$EDAD)<= 9] <-1 
+sum(Personas01$GrupoEdad == 1)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=10 & as.numeric(Personas01$EDAD)<= 19] <-2 
+sum(Personas01$GrupoEdad == 2)
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=20 & as.numeric(Personas01$EDAD)<= 29] <-3
+sum(Personas01$GrupoEdad == 3)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=30 & as.numeric(Personas01$EDAD)<= 39] <-4
+sum(Personas01$GrupoEdad == 4)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=40 & as.numeric(Personas01$EDAD)<= 49] <-5
+sum(Personas01$GrupoEdad == 5)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=50 & as.numeric(Personas01$EDAD)<= 59] <-6
+sum(Personas01$GrupoEdad == 6)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=60 & as.numeric(Personas01$EDAD)<= 69] <-7
+sum(Personas01$GrupoEdad == 7)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=70 & as.numeric(Personas01$EDAD)<= 74] <-8
+sum(Personas01$GrupoEdad == 8)
+
+Personas01$GrupoEdad[as.numeric(Personas01$EDAD) >=75] <-9
+sum(Personas01$GrupoEdad == 9)
+
+sum(table(Personas01$GrupoEdad))
+sum(wtd.table(Personas01$GrupoEdad,weights = Personas01$FACTOR))
+
+####### NIVEL ESCOLAR
+table(Personas01$NIVACAD)
+sum(table(Personas01$NIVACAD))
+
+#######ESTADO CONYUGAL
+table(Personas01$SITUA_CONYUGAL)
+sum(table(Personas01$SITUA_CONYUGAL))
+
+Zacatecas
+install.packages("foreign")
+require(foreign)
+install.packages("questionr")
+require(questionr)
+install.packages("dplyr")
+require(dplyr)
+
+##################################### 1 #######################################
+####### DEMOGRAFIA
+####### SEXO
+table(Personas32$SEXO)
+sum(table(Personas32$SEXO))
+require(questionr)
+wtd.table(Personas32$SEXO, weights = Personas32$FACTOR) 
+sum(wtd.table(Personas32$SEXO, weights = Personas32$FACTOR))
+
+######## GRUPO DE EDAD
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) == 999] <-0 
+sum(Personas32$GrupoEdad == 0)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=0 & as.numeric(Personas32$EDAD)<= 9] <-1 
+sum(Personas32$GrupoEdad == 1)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=10 & as.numeric(Personas32$EDAD)<= 19] <-2 
+sum(Personas32$GrupoEdad == 2)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=20 & as.numeric(Personas32$EDAD)<= 29] <-3
+sum(Personas32$GrupoEdad == 3)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=30 & as.numeric(Personas32$EDAD)<= 39] <-4
+sum(Personas32$GrupoEdad == 4)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=40 & as.numeric(Personas32$EDAD)<= 49] <-5
+sum(Personas32$GrupoEdad == 5)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=50 & as.numeric(Personas32$EDAD)<= 59] <-6
+sum(Personas32$GrupoEdad == 6)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=60 & as.numeric(Personas32$EDAD)<= 69] <-7
+sum(Personas32$GrupoEdad == 7)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=70 & as.numeric(Personas32$EDAD)<= 74] <-8
+sum(Personas32$GrupoEdad == 8)
+
+Personas32$GrupoEdad[as.numeric(Personas32$EDAD) >=75] <-9
+sum(Personas32$GrupoEdad == 9)
+
+sum(table(Personas32$GrupoEdad))
+sum(wtd.table(Personas32$GrupoEdad,weights = Personas32$FACTOR))
+
+####### NIVEL ESCOLAR
+table(Personas32$NIVACAD)
+sum(table(Personas32$NIVACAD))
+
+#######ESTADO CONYUGAL
+table(Personas32$SITUA_CONYUGAL)
+sum(table(Personas32$SITUA_CONYUGAL))
+
+BASE VIVIENDAS 
+AGUASCALIENTES 
+########Clase vivienda 
+table(Viviendas01$CLAVIVP)
+sum(table(Viviendas01$CLAVIVP))
+
+####### Techo
+table(Viviendas01$TECHOS)
+sum(table(Viviendas01$TECHOS))
+
+###########Viviendas con refrigerados, lavadora, auto e internet
+
+base2<-Viviendas01%>%
+as_tibble() %>% 
+mutate(viviendas= case_when(EREFRIGERADOR==1 & LAVADORA==3 & AUTOPROP==7 & 
+INTERNET==7 ~ 1) 
+###########Tenencia vivienda 
+table(Viviendas01$TENENCIA)
+sum(table(Viviendas01$TENENCIA))
+
+ZACATECAS 
+BASE VIVIENDAS 
+########Clase vivienda 
+table(Viviendas32$CLAVIVP)
+sum(table(Viviendas32$CLAVIVP))
+
+####### Techo
+table(Viviendas32$TECHOS)
+sum(table(Viviendas32$TECHOS))
+
+###########Viviendas con refrigerados, lavadora, auto e internet
+
+base2<-Viviendas32%>%
+as_tibble() %>% 
+mutate(viviendas= case_when(EREFRIGERADOR==1 & LAVADORA==3 & AUTOPROP==7 & 
+INTERNET==7 ~ 1) 
+
+###########Tenencia vivienda 
+table(Viviendas32$TENENCIA)
+sum(table(Viviendas32$TENENCIA))
+
+
+2.	Crecimiento poblacional 
+#########Ecuacion compensadora 
+Aguascalientes
+
+2000
+pob: 944,285	
+Nacimientos: 26,583
+Muertes:5,177
+Inmigrantes internos:187,768
+Emigrantes internos: 116,039
+
+
+2020
+pob: 1,425,607
+Nacimientos:  20,370
+Muertes: 9,548
+Inmigrantes internos: 276,430
+Emigrantes internos: 144,612	
+
+tasa de crecimiento anual
+(1425607-944285)/944285 = 0.5097211
+
+
+tasa de creciminto exponencial 
+
+P2000<-944285
+p2020<-1425607
+r2000a2020<-((log(p2020/P2000)/10)) ###Obtener la tasa de crecimiento exponencial
+r2000a2020
+r2020a2000<-((log(P2000/p2020)/-10)) ###Obtener la tasa de crecimiento exponencial
+r2020a2000
+
+########INTERPOLACION: CON POBLACION INICIAL DEL AñO 2000
+P30jun2000<-944285
+a1<-(4855/365) #### Han transcurrido 4855 días del 30/06/2000 al 15/oct/2013
+P15soct2013<-round(((P30jun2000)*(exp((r2000a2020)*(a1))))) 
+P15soct2013
+
+####iNTERPOLACION: CON FECHA FINAL DEL A?O 2020
+P30jun2020<-1425607
+a2<-(-2450/365) #### Han transcurrido 2450 d?as del 30/junio/2020 al 15/oct/2013
+P15soct2013<-round(((P30jun2020)*(exp((r2020a2000)*(a2))))) 
+P15soct2013
+
+####EXTRAPOLACION
+P30jun2020<-1425607
+a3<-(684/365) #### Han transcurrido 684 dias del 15/oct/2013 al 15/mayo/2022
+P15soct2013<-round(((p2020)*(exp((r2000a2020)*(a3)))))
+P15soct2013
+
+
+Zacatecas
+pob: 1,353,610
+2000
+Nacimientos: 37688
+Muertes:8,373
+Inmigrantes internos:125,319
+Emigrantes internos: 522,885
+
+
+pob: 1,622,138
+2020
+Nacimientos:  24350
+Muertes: 14,519
+Inmigrantes internos: 177,107
+Emigrantes internos: 503,806	
+
+tasa de crecimiento anual 
+(1622138-1353610)/1353610= 0.1983791
+
+
+tasa de creciminto exponencial 
+
+P2000<-1353610
+p2020<-1622138
+r2000a2020<-((log(p2020/P2000)/10)) ###Obtener la tasa de crecimiento exponencial
+r2000a2020
+r2020a2000<-((log(P2000/p2020)/-10)) ###Obtener la tasa de crecimiento exponencial
+r2020a2000
+
+
+
+########INTERPOLACION: CON POBLACION INICIAL DEL AñO 2000
+P30jun2000<-1353610
+a1<-(4855/365) #### Han transcurrido 4855 días del 30/06/2000 al 15/oct/2013
+P15soct2013<-round(((P30jun2000)*(exp((r2000a2020)*(a1))))) 
+P15soct2013
+
+####iNTERPOLACION: CON FECHA FINAL DEL AñO 2020
+P30jun2020<-1622138
+a2<-(-2450/365) #### Han transcurrido 2450 días del 30/junio/2020 al 15/oct/2013
+P15soct2013<-round(((P30jun2020)*(exp((r2020a2000)*(a2))))) 
+P15soct2013
+####EXTRAPOLACION
+P30jun2020<-1622138
+a3<-(684/365) #### Han transcurrido 684 dias del 15/oct/2013 al 15/mayo/2022
+P15soct2013<-round(((p2020)*(exp((r2000a2020)*(a3)))))
+P15soct2013
+
+3.	Tasas especificas 
+Aguascalientes 
+################################# Fecundidad 
+tef, tgf
+gpoedad<-c("15-19","20-24","25-29","30-34","35-39","40-44")
+nac<-c(3456,6264,6094,4109,2047,542)
+pobfem<-c(65064,63866,60285,55174,51483,48539)
+nacfem<-c(1636,3096,2983,2039,988,272)
+nachom<- nac-nacfem
+propsex=sum(nachom)/sum(nacfem)*100
+S=(100/(100+propsex))
+tef<-(nac/pobfem)
+teffem<-(nacfem/pobfem)
+n=5
+TGrF<-(sum((nac)/pobfem)*5)
+TGF<-(sum(tef)*n)
+TBR<-(TGF*S)
+TNR<-(n*sum(tef)*S*propsex)
+tasas<-data.frame(gpoedad,nac,pobfem,nacfem,nachom,tef,teffem,TGrF,TGF,TBR,TNR)
+Zacatecas
+gpoedad<-c("15-19","20-24","25-29","30-34","35-39","40-44")
+nac<-c(3749,6354,6267,4769,2336,597)
+pobfem<-c(70348,66949,61768,60856,55075,53943)
+nacfem<-c(1862,3108,3022,2369,1129,303)
+nachom<- nac-nacfem
+propsex=sum(nachom)/sum(nacfem)*100
+S=(100/(100+propsex))
+tef<-(nac/pobfem)
+teffem<-(nacfem/pobfem)
+n=5
+TGrF=sum((nac)/pobfem)*5
+TGF<-sum(tef)*n
+TBR<-TGF*S
+TNR<-(n*sum(tef)*S*propsex)
+tasas<-data.frame(gpoedad,nac,pobfem,nacfem,nachom,tef,teffem,TGrF,TGF,TBR,TNR)
